@@ -1,0 +1,30 @@
+<form my-obj="SeqGen" title="序列号生成" style="width:500px;height:400px;">
+<!-- wui-script="dlgSeqGen.js" my-initfn="initDlgSeqGen"  -->
+	<table>
+		<tr>
+			<td>编号</td>
+			<td>
+				<input name="id" disabled>
+			</td>
+		</tr>
+		<tr>
+			<td>编码</td>
+			<td>
+				<input name="code" disabled>
+				<p class="hint">序列号生成器编码</p>
+			</td>
+		</tr>
+		<tr>
+			<td>当前值</td>
+			<td>
+				<input name="value" class="wui-picker-edit">
+				<p class="hint">修改该值将影响生成器下一次取值。默认从1开始。删除记录则下次取值重置为1。</p>
+			</td>
+		</tr>
+	</table>
+</form>
+<!-- examples:
+<input name="name" class="easyui-validatebox" data-options="required:true">
+<select name="customerId" class="my-combobox" data-options="ListOptions.Customer()"></select>
+<select name="status" class="my-combobox" data-options="jdEnumMap:OrderStatusMap"></select>
+-->
