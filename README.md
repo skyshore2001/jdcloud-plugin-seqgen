@@ -29,3 +29,15 @@ seqgen: sequence generator
 
 	AC0_SeqGen::next(code?="default")
 
+## 配置
+
+### 值回调函数 g_conf_seqGen_onNext
+
+示例：不希望序列号从1开始，而是从1001-9999间的一个随机数开始。
+
+	$GLOBALS["g_conf_seqGen_onNext"] = function (&$value) {
+		if ($value <= 1000)
+			$value = rand(1001, 9999);
+	};
+
+修改了值后，该值会存入数据库，下次从该值开始分配。
